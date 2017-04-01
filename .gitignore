@@ -27,3 +27,9 @@
 *.exe
 *.out
 *.app
+
+#Trash User Settings
+*.projitems
+*.shproj
+cmake-build-debug/
+*.idea/
