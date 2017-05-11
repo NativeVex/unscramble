@@ -7,7 +7,12 @@
 #include <ncurses.h>
 int main(){
   initscr();
-  printw("hai");
+  int ch;
+  raw();
+  keypad(stdscr, TRUE);
+  noecho();
+  printw("Bolden the below")
+  ch = getch();
   refresh();
   getch();
   endwin();
