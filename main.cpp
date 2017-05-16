@@ -10,7 +10,7 @@ int main(){
   raw();
   keypad(stdscr, TRUE);
   noecho();
-  printw("Bolden the below");
+  printw("temporary text here");
   ch = getch();
   printw(ch+"");
   refresh();
