@@ -2,7 +2,6 @@
 // Created by artur on 3/31/17.
 //
 
-#include "main.h"
 #include <iostream>
 #include <ncurses.h>
 int main(){
@@ -11,10 +10,11 @@ int main(){
   raw();
   keypad(stdscr, TRUE);
   noecho();
-  printw("Bolden the below")
+  printw("Bolden the below");
   ch = getch();
+  printw(ch+"");
   refresh();
-  getch();
+// getch();
   endwin();
 
   return 0;
