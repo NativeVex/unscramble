@@ -6,15 +6,20 @@
 #include <ncurses.h>
 int main(){
   initscr();
-  int ch;
+  char str[80]; 
   raw();
   keypad(stdscr, TRUE);
   noecho();
   printw("temporary text here");
-  ch = getch();
-  printw(ch+"");
+  getstr(str);
+ // printw(str); // apparently this doesn't 
+  printf(str); //this works, str is written to. 
   refresh();
-// getch();
+//  mvprintw("you typed %s", str);
+  getch();
+  printw("you entered %s", str);
+  refresh();
+  getch();
   endwin();
 
   return 0;
