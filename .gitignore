@@ -29,7 +29,4 @@
 *.app
 
 #Trash User Settings
-*.projitems
-*.shproj
-cmake-build-debug/
-*.idea/
+/node_modules
