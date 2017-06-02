@@ -3,8 +3,7 @@
 using namespace std;
 
 char Unscramble() {
-
-return 'c';
+return '0';
 }
 
 void UpdateAI() {
