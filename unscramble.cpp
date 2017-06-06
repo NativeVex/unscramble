@@ -29,7 +29,7 @@ cout << "Fifth word: " << endl;
 cin >> w5;
 
 //debug
-//cout << "The sentence you have entered is: " << w1 << w2 << w3 << w4 << w5 << endl;
+cout << "The sentence you have entered is: " << w1 << ", " << w2 << ", " << w3 << ", " << w4 << ", " << w5 << endl;
 
 cout << Unscramble();
 
