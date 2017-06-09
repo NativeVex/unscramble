@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include <ncurses.h>
+#include <curses.h>
+
 int main(){
   initscr();
   char str[80]; 
