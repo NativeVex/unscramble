@@ -1,19 +1,18 @@
 #include <iostream>
-#include <vector>
-//#include "preprocess.cpp" 
+#include "preprocess.h" 
 
 using namespace std;
 
-void Unscramble(char * w1, char * w2, char * w3, char * w4, char * w5) {
+// GETS SEGMENTATION FAULT WHEN NumFrequency(string word) IS CALLED 
+
+void Unscramble(string w1, string w2, string w3, string w4, string w5){
 //Unscramble
 
-// need to convert char to std::vector<char>
-vector<char> inputs = (w1, w2, w3, w4, w5);
-vector<char> inputFrequencies;
-
-char input
-for (input::inputs){
-//inputFrequencies.push_back(NumFrequency(input));
+vector<string> inputs = {w1, w2, w3, w4, w5};
+vector<vector<string>> inputFrequencies;
+for (string word : inputs){
+  //Adds the letter frequency for each word into inputFrequencies
+  inputFrequencies.push_back(NumFrequency(word));
 }
 
 cout << "The unscrambled sentence is: " << w1 << " " << w2 << " " << w3 << " " << w4 << " " << w5 << endl;
@@ -24,32 +23,24 @@ void UpdateAI() {
 }
 
 int main() {
-char input;
+string w1, w2, w3, w4, w5;
 cout << "Enter a the first word in the SCRAMBLED sentence: " << endl;
-cin >> input;
-vector<char> w1(input.begin(), input.end());
+cin >> w1;
 
 cout << "Second word: " << endl;
-cin >> input;
-vector<char> w2(input.begin(), input.end());
+cin >> w2;
 
 cout << "Third word: " << endl;
-cin >> input;
-vector<char> w3(input.begin(), input.end());
+cin >> w3;
 
 cout << "Fourth word: " << endl;
-cin >> input;
-vector<char> w4(input.begin(), input.end());
+cin >> w4;
 
 cout << "Fifth word: " << endl;
-cin >> input;
-vector<char> w5(input.begin(), input.end());
+cin >> w5;
 
-//debug
+cout << "Your scrambled sentence is: " << w1 << " " << w2 << " " << w3 << " " << w4 << " " << w5 << endl;
 
-cout << "The scrambled sentence you have entered is: " << w1 << " " << w2 << " " << w3 << " " << w4 << " " << w5 << endl;
-
-Unscramble(w1, w2,w3, w4, w5);
-
+Unscramble (w1, w2, w3, w4, w5);
 return 0;
 }
