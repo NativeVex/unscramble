@@ -4,18 +4,19 @@
 
 #include <iostream>
 #include <ncurses.h>
+#include <curses.h>
+
 int main(){
   initscr();
   char str[80]; 
   raw();
   keypad(stdscr, TRUE);
   noecho();
-  printw("temporary text here");
-  getstr(str);
- // printw(str); // apparently this doesn't 
+  printw("Type in your scramble sentence. Scramble each word of your sentence.\n");
+  //cbreak();
+  getstr(str); 
   printf(str); //this works, str is written to. 
   refresh();
-//  mvprintw("you typed %s", str);
   getch();
   printw("you entered %s", str);
   refresh();
